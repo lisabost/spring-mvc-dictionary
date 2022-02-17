@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head th:replace="fragments/frags :: head"></head>
+<body>
+    <div th:insert="fragments/frags :: header"></div>
+    <div class="container">
+        <div class="definition">
+            <h1 th:text="|The Definition of: ${word}|">WORD</h1>
+
+            <h2 th:text="${definition}">DEFINITION</h2>
+        </div>
+</div>
+<div th:replace="fragments/frags :: footer"></div>
+</body>
+</html>

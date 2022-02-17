@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head th:replace="fragments/frags :: head"></head>
+<body>
+<div th:insert="fragments/frags :: header"></div>
+<div class="container mt-5">
+<!--    <div th:replace="fragments/frags :: background"></div>-->
+    <!--Insert the words here-->
+    <ul class="list-group">
+        <li  class="list-group-item" th:each="item : ${words}">
+            <a class="text-decoration-none" th:href="@{/dictionary/{term}(term = ${item.term})}" th:text="${item.term}"></a>
+        </li>
+    </ul>
+</div>
+
+<div th:replace="fragments/frags :: footer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+</body>
+</html>
